@@ -31,18 +31,14 @@
         :align="align"
       >
         <template #default="scope">
-          <slot
-            :name="header.prop"
-            :row="scope.row"
-            :$index="scope.$index"
-          >
+          <slot :name="header.prop" :row="scope.row" :$index="scope.$index">
             <span>
               {{
                 header.formatter
                   ? header.formatter(
-                    extractProp(scope.row, header.prop, header.default),
-                    scope.row
-                  )
+                      extractProp(scope.row, header.prop, header.default),
+                      scope.row
+                    )
                   : extractProp(scope.row, header.prop, header.default)
               }}
             </span>
@@ -380,12 +376,12 @@ export default {
 </script>
 
 <style scoped>
-.element-datatable-plus::v-deep .el-pagination__total,
-.element-datatable-plus::v-deep .el-pagination__sizes {
+.element-datatable-plus:deep(.el-pagination__total),
+.element-datatable-plus:deep(.el-pagination__sizes) {
   float: left;
 }
 
-.element-datatable-plus::v-deep .edp-clickable .el-table__body tr {
+.element-datatable-plus:deep(.edp-clickable .el-table__body tr) {
   cursor: pointer;
 }
 
