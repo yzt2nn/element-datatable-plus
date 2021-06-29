@@ -171,6 +171,16 @@ export default {
       type: Function,
       default: null,
     },
+    sortPropName: {
+      // 自定义指定排序字段的key名
+      type: String,
+      default: "sortby",
+    },
+    sortOrderName: {
+      // 自定义指定排序方式的key名
+      type: String,
+      default: "order",
+    },
     orderName: {
       // 自定义升降序名称
       type: Array,
@@ -194,6 +204,8 @@ export default {
       totalName,
       onRowClick,
       onSelectionChange,
+      sortPropName,
+      sortOrderName,
       orderName,
     } = toRefs(props);
 
@@ -250,10 +262,8 @@ export default {
             ascending: orderName.value[0],
             descending: orderName.value[1],
           };
-          sortParams[sortCol.sortProp || sortCol.prop] = currentSortInfo.value
-            .order
-            ? orderNameMap[currentSortInfo.value.order]
-            : undefined;
+          sortParams[sortPropName.value] = sortCol.sortProp || sortCol.prop;
+          sortParams[sortOrderName.value] = orderNameMap[currentSortInfo.value.order];
         }
         const params = { ...innerParams, ...sortParams, ...queryParams.value };
         reqIns.value
