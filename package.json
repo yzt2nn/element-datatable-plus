@@ -1,6 +1,6 @@
 {
   "name": "element-datatable-plus",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "description": "一个基于element-plus的表格组件",
   "private": false,
   "main": "index.js",
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/yzt2nn/element-datatable-plus#readme",
   "peerDependencies": {
     "vue": "^3.1.1",
-    "element-plus": "^1.0.2-beta.48",
+    "element-plus": "^1.0.2-beta.53",
     "axios": "^0.21.1",
     "lodash": "^4.17.21"
   }

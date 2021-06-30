@@ -66,7 +66,7 @@
 </template>
 <script>
 import axios from "axios";
-import * as _ from "lodash";
+import _ from "lodash";
 import { ref, toRefs, onMounted, computed, watch } from "vue";
 
 export default {
