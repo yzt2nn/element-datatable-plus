@@ -1,6 +1,6 @@
 {
   "name": "element-datatable-plus",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "一个基于element-plus的表格组件",
   "private": false,
   "main": "index.js",

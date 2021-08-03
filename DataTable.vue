@@ -53,7 +53,7 @@
         ref="pagination"
         :disabled="isLoading"
         :current-page="currentPage"
-        :page-size="size"
+        :page-size="currentSize"
         :page-sizes="sizeOptions"
         :total="total"
         :layout="pagination"
