@@ -29,6 +29,7 @@
         :sort-orders="['ascending', 'descending', null]"
         :width="header.width ? header.width : ''"
         :align="align"
+        :fixed="header.fixed || false"
       >
         <template #default="scope">
           <slot :name="header.prop" :row="scope.row" :$index="scope.$index">
