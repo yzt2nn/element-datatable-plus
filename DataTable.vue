@@ -11,6 +11,7 @@
       @row-click="handleRowClick"
       @selection-change="handleSelectionChange"
       @sort-change="handleSortChange"
+      :row-class-name="rowClassName"
     >
       <el-table-column
         v-if="onSelectionChange"
@@ -186,6 +187,11 @@ export default {
       // 自定义升降序名称
       type: Array,
       default: () => ["asc", "desc"],
+    },
+    rowClassName: {
+      // 行的 className 的回调方法，或一个字符串
+      type: [Function, String],
+      default: null,
     },
     preprocess: {
       // 预处理回调
